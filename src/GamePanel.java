@@ -19,6 +19,8 @@ int currentState = MENU;
 Font titleFont;
 Font somethingFont;
 Timer frameDraw;
+Rocketship r = new Rocketship(250,700,50,50);
+
 
 GamePanel(){
 titleFont = new Font("Arial", Font.PLAIN, 48);
@@ -53,6 +55,10 @@ void drawMenuState(Graphics g) {
 	g.drawString("Press Space to See Instructions", 50, 600);
 }
 void drawGameState(Graphics g) {  
+	g.setColor(Color.BLACK);
+	g.fillRect(0, 0, LeagueInvaders.WIDTH, LeagueInvaders.HEIGHT);
+	r.draw(g);
+	
 	
 }
 void drawEndState(Graphics g)  {
@@ -60,11 +66,12 @@ void drawEndState(Graphics g)  {
 	g.fillRect(0, 0, LeagueInvaders.WIDTH, LeagueInvaders.HEIGHT);
 	g.setFont(titleFont);
 	g.setColor(Color.YELLOW);
-	g.drawString("GAME OVER", 200, 100);
+	g.drawString("GAME OVER", 25, 100);
+	g.setFont(somethingFont);
 	g.setColor(Color.YELLOW);
-	g.drawString("You Killed Enemies", 200, 100);
+	g.drawString("You Killed Enemies", 50, 400);
 	g.setColor(Color.YELLOW);
-	g.drawString("Press Enter to Restart", 200, 100);
+	g.drawString("Press Enter to Restart", 50, 600);
 	
 }
 
