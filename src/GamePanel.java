@@ -123,6 +123,7 @@ public void keyPressed(KeyEvent e) {
 	
 	if (e.getKeyCode()==KeyEvent.VK_UP) {
 	        System.out.println("UP");
+	         r.up();
     }  
 	}
 	if (currentState==GAME) {
@@ -130,6 +131,7 @@ public void keyPressed(KeyEvent e) {
 		
 		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
 		        System.out.println("DOWN");
+		        r.down();
 	    }  
 		}
 	if (currentState==GAME) {
@@ -137,6 +139,7 @@ public void keyPressed(KeyEvent e) {
 		
 		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 		        System.out.println("RIGHT");
+		        r.right();
 	    }  
 		}
 	if (currentState==GAME) {
@@ -144,6 +147,7 @@ public void keyPressed(KeyEvent e) {
 		
 		if (e.getKeyCode()==KeyEvent.VK_LEFT) {
 		        System.out.println("LEFT");
+		        r.left();
 	    }  
 		}
 }
