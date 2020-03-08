@@ -123,7 +123,11 @@ public void keyPressed(KeyEvent e) {
 	
 	if (e.getKeyCode()==KeyEvent.VK_UP) {
 	        System.out.println("UP");
-	         r.up();
+	        if (r.y>0) {
+	        	r.up();
+	        	System.out.println("up");
+			}
+	         
     }  
 	}
 	if (currentState==GAME) {
@@ -131,6 +135,7 @@ public void keyPressed(KeyEvent e) {
 		
 		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
 		        System.out.println("DOWN");
+		        if(r.y+50<LeagueInvaders.HEIGHT) {
 		        r.down();
 	    }  
 		}
@@ -139,7 +144,11 @@ public void keyPressed(KeyEvent e) {
 		
 		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 		        System.out.println("RIGHT");
-		        r.right();
+		        if (r.x+50<LeagueInvaders.WIDTH) {
+		        	r.right();
+					
+				}
+		       
 	    }  
 		}
 	if (currentState==GAME) {
@@ -147,10 +156,14 @@ public void keyPressed(KeyEvent e) {
 		
 		if (e.getKeyCode()==KeyEvent.VK_LEFT) {
 		        System.out.println("LEFT");
+		        if(r.x>0) {
 		        r.left();
+		        System.out.println("left");
 	    }  
 		}
-}
+		
+	}}}
+
 
 @Override
 public void keyReleased(KeyEvent e) {
