@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Alien extends GameObject {
+    boolean isActive=false;
 	Alien(int x, int y, int width, int height) {
 		super(x, y, width, height);
 		speed=1;
