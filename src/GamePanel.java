@@ -20,7 +20,7 @@ Font titleFont;
 Font somethingFont;
 Timer frameDraw;
 Rocketship r = new Rocketship(250,700,50,50);
-
+ObjectManager on = new ObjectManager(r);
 
 GamePanel(){
 titleFont = new Font("Arial", Font.PLAIN, 48);
@@ -35,7 +35,7 @@ void updateMenuState() {
 	
 }
 void updateGameState() {  
-	
+	on.update();
 }
 void updateEndState()  { 
 	
